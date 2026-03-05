@@ -1,0 +1,10 @@
+Flag_Color,Flag_Name,Description
+Blue,Time gaps (>20 min),"Flagged because they usually mean the monitor was not recording normally (uninstall, battery/network issues, or missed logs), so the time series is not continuous and needs an explanation."
+Red/Pink,DO < 0.1 mg/L,"Flagged because near-zero DO readings can either indicate a probe issue (out of water, bio-fouling) or an extreme low-dissolved-oxygen event that should be verified."
+Yellow,DO jump > 2 mg/L (approx 15 min),Flagged because DO typically does not change that sharply over 15 minutes unless something external happened (probe moved/cleaned/reset or exposed to air).
+Yellow,DO > 10 mg/L before noon,Flagged because very high DO early in the day can be sensor noise. It is an outlier that can change interpretation if not reviewed.
+Green,pH < 6 or > 10,Flagged because these pH values are unusual for pond aquaculture and could point to measurement error or an exceptional event.
+Light Green,pH jump > 1 (approx 15 min),Flagged because a 1-unit jump in 15 minutes for pH could be linked with probe disturbance/reset or recording issues rather than a true pond change.
+Gray,Flyover (10:20 to 10:40 AM),"Flagged because they are the single best-aligned measurements to satellite overpass timing, so we can compare ground truth to satellite across ponds and dates."
+
+Note,The conditional formatting colors may override each other and only one color will be displayed for cells that have multiple flags.,
