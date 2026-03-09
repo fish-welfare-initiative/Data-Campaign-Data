@@ -56,6 +56,12 @@ The original Excel files use color-coded conditional formatting to flag potentia
 | `probes_cleaned` | Probes were cleaned on this date. |
 | `satellite_flyover_date` | Satellite flyover occurred on this date. |
 
+### Zero-Value Readings
+
+Some readings contain exact zero values (0) for DO, pH, and/or Temperature. These are equipment artifacts — typically caused by device resets, sensor initialization on startup, or outages — and do not represent real water quality measurements. They should be filtered out before analysis.
+
+Most zero-value readings occur on January 8, 2026, across many devices simultaneously (likely a coordinated calibration or firmware event). A few ponds also have longer stretches of zeros: `eb2903bd` has a multi-day outage starting January 5, and `ac7bb683` has persistent pH=0 readings after being reinstalled on January 25 following a harvest. These zeros are not flagged by the QC conditional formatting rules but are noted in `csv/QC_Flags.csv`.
+
 ## Parameters Collected
 
 | Parameter | Device |
