@@ -1,0 +1,10 @@
+.DS_Store
+
+# Confidential — never commit. The pond ID key maps published identifiers
+# back to real farms.
+*_CONFIDENTIAL.*
+*pond_key*
+*Pond ID*Key*
+*pond_id_mapping*
+private/
+source_data/
